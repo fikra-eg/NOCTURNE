@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant Garamond:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=DM Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,14 +28,14 @@
         margin: 0;
         background: var(--bg);
         color: var(--ink);
-        font-family: "Inter", sans-serif;
+        font-family: "DM Sans", sans-serif;
         -webkit-font-smoothing: antialiased;
       }
-      h1, h2, h3, .serif { font-family: "Fraunces", serif; }
+      h1, h2, h3, .serif { font-family: "Cormorant Garamond", serif; }
       .wordmark {
         writing-mode: vertical-rl;
         transform: rotate(180deg);
-        font-family: "Fraunces", serif;
+        font-family: "Cormorant Garamond", serif;
         font-weight: 400;
         letter-spacing: 0.08em;
         font-size: clamp(2.4rem, 6vw, 4.2rem);
@@ -99,14 +99,16 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        background: #020202;
+        background: #000;
       }
       .hero-image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
-        transform: scale(1.03);
+        background: #000;
+        mix-blend-mode: darken;
+        transform: none;
       }
       #overlay {
         position: fixed;
@@ -148,7 +150,7 @@
         border: 1px solid var(--line);
         color: var(--ink);
         padding: 0.65rem 0.85rem;
-        font-family: "Inter", sans-serif;
+        font-family: "DM Sans", sans-serif;
         font-size: 0.9rem;
       }
       .field::placeholder { color: var(--muted); }
@@ -182,8 +184,8 @@
       html { scroll-padding-top: 88px; }
       .site-header { position:sticky;top:0;z-index:30;background:rgba(11,10,8,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line); }
       .site-nav { min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px; }
-      .brand-mark { color:var(--ink);text-decoration:none;font:500 27px "Fraunces",serif;letter-spacing:.14em;line-height:1; }
-      .brand-mark span { display:block;color:var(--gold);font:500 9px Inter,sans-serif;letter-spacing:.2em;margin-top:7px; }
+      .brand-mark { color:var(--ink);text-decoration:none;font:500 27px "Cormorant Garamond",serif;letter-spacing:.14em;line-height:1; }
+      .brand-mark span { display:block;color:var(--gold);font:500 9px DM Sans,sans-serif;letter-spacing:.2em;margin-top:7px; }
       .main-nav { display:flex;align-items:center;gap:30px; }
       .main-nav a,.nav-cta,.text-link { color:var(--ink);text-decoration:none;font-size:12px;letter-spacing:.04em;transition:color .2s; }
       .main-nav a:hover,.text-link:hover { color:var(--gold); }
@@ -192,7 +194,7 @@
       .brand-hero { min-height:590px;position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:56px max(6vw,24px);overflow:hidden;background:radial-gradient(ellipse at 75% 50%,#282017 0,#110f0d 48%,#0b0a08 100%); }
       .hero-copy { position:relative;z-index:2;max-width:570px; }
       .eyebrow { color:var(--gold);font-size:10px;letter-spacing:.22em;font-weight:600; }
-      .hero-copy h1 { font:400 clamp(56px,8vw,112px)/1 "Fraunces",serif;letter-spacing:.08em;margin:18px 0 12px; }
+      .hero-copy h1 { font:400 clamp(56px,8vw,112px)/1 "Cormorant Garamond",serif;letter-spacing:.08em;margin:18px 0 12px; }
       .hero-copy p { color:#c8bba8;font-size:17px;margin:0; }
       .btn-gold { display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:14px 24px;border:0;text-decoration:none;cursor:pointer; }
       .hero-btn { margin-top:28px;font-size:12px; }
@@ -204,37 +206,37 @@
       .trust-items b { color:var(--ink);font-weight:500; }
       .section-block { padding:88px 0; }
       .section-heading { display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px; }
-      .section-heading h2 { font:400 clamp(32px,4vw,48px)/1.15 "Fraunces",serif;margin:12px 0 0; }
+      .section-heading h2 { font:400 clamp(32px,4vw,48px)/1.15 "Cormorant Garamond",serif;margin:12px 0 0; }
       .section-heading p { color:var(--muted);font-size:13px;margin-top:10px; }
       .product-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 22px; }
       .product-card { min-width:0;cursor:pointer; }
-      .product-image-button { width:100%;padding:0;position:relative;display:block;overflow:hidden;background:#11100e;border:1px solid var(--line);aspect-ratio:4/5;cursor:pointer; }
-      .product-image-button img { display:block;width:100%;height:100%;object-fit:contain;padding:10%;transition:transform .55s ease; }
+      .product-image-button { width:100%;padding:0;position:relative;display:block;overflow:hidden;background:#000;border:1px solid var(--line);aspect-ratio:4/5;cursor:pointer; }
+      .product-image-button img { display:block;width:100%;height:100%;object-fit:contain;padding:10%;background:#000;mix-blend-mode:darken;transition:transform .55s ease; }
       .product-card:hover .product-image-button img { transform:scale(1.045); }
       .view-product { position:absolute;bottom:14px;right:14px;background:var(--gold);color:#17120d;padding:9px 13px;font-size:10px;opacity:0;transform:translateY(6px);transition:.25s; }
       .product-card:hover .view-product { opacity:1;transform:none; }
       .product-info { padding:16px 2px 0; }
       .product-title-row { display:flex;justify-content:space-between;align-items:baseline;gap:10px; }
-      .product-title-row h3 { font:400 22px "Fraunces",serif;margin:0; }
+      .product-title-row h3 { font:400 22px "Cormorant Garamond",serif;margin:0; }
       .product-price { color:var(--gold);font-size:12px;white-space:nowrap; }
       .product-description { color:#b3aa9b;font-size:12px;line-height:1.9;margin:9px 0 10px;min-height:46px; }
       .product-size-note { color:var(--muted);font-size:9px;letter-spacing:.16em; }
       .brand-statement { padding:88px 0;background:#15120f;border-block:1px solid var(--line); }
       .statement-inner { max-width:950px;text-align:center; }
-      .statement-inner p { font:400 clamp(27px,4.2vw,48px)/1.55 "Fraunces",serif;margin:24px auto 30px; }
+      .statement-inner p { font:400 clamp(27px,4.2vw,48px)/1.55 "Cormorant Garamond",serif;margin:24px auto 30px; }
       .statement-sign { color:var(--muted);font-size:9px;letter-spacing:.22em; }
       .collection-section { background:#0e0d0b; }
       .story-section { padding:90px 0;border-block:1px solid var(--line); }
       .story-inner { display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center; }
       .story-image { height:480px;background:#100e0c;display:flex;justify-content:center;align-items:center;overflow:hidden; }
       .story-image img { height:100%;width:100%;object-fit:contain;padding:9%; }
-      .story-copy h2 { font:400 clamp(40px,5vw,62px)/1.2 "Fraunces",serif;margin:18px 0; }
+      .story-copy h2 { font:400 clamp(40px,5vw,62px)/1.2 "Cormorant Garamond",serif;margin:18px 0; }
       .story-copy p { color:#b3aa9b;line-height:2;font-size:14px;max-width:470px;margin-bottom:26px; }
       .policies-section { padding:78px 0 90px; }
       .policy-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:22px; }
       .policy-grid>div { border-top:1px solid var(--gold-dim);padding:20px 8px 0 0; }
       .policy-grid span { color:var(--gold);font-size:10px;letter-spacing:.15em; }
-      .policy-grid h3 { font:400 23px "Fraunces",serif;margin:15px 0 8px; }
+      .policy-grid h3 { font:400 23px "Cormorant Garamond",serif;margin:15px 0 8px; }
       .policy-grid p { color:var(--muted);font-size:12px;line-height:1.9; }
       .site-footer { background:#100e0c;border-top:1px solid var(--line);padding:44px 0; }
       .footer-inner { display:flex;justify-content:space-between;align-items:end;gap:30px; }
@@ -252,7 +254,7 @@
       .product-page-content { padding:12px 0 30px; }
       .product-breadcrumb { color:var(--muted);font-size:10px;margin-bottom:26px; }
       .product-breadcrumb a { color:var(--muted);text-decoration:none; }
-      .product-page-content h2 { font:400 clamp(38px,5vw,58px)/1.1 "Fraunces",serif;margin:12px 0 8px; }
+      .product-page-content h2 { font:400 clamp(38px,5vw,58px)/1.1 "Cormorant Garamond",serif;margin:12px 0 8px; }
       .detail-tagline { color:var(--gold);font-size:13px; }
       .detail-description { color:#c2b8a8;font-size:14px;line-height:2;margin:23px 0; }
       .detail-notes { display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line);padding:18px 0;gap:12px; }
@@ -270,11 +272,11 @@
       .detail-stock { color:var(--muted);font-size:10px;margin-top:12px; }
       .detail-buy-row { display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:25px;padding-top:20px;gap:18px; }
       .detail-buy-row span { display:block;color:var(--muted);font-size:10px; }
-      .detail-buy-row strong { color:var(--gold);font:400 22px "Fraunces",serif; }
+      .detail-buy-row strong { color:var(--gold);font:400 22px "Cormorant Garamond",serif; }
       .detail-buy-row .btn-gold,.confirm-order { min-height:48px;padding:12px 24px;font-size:12px; }
       .order-form { margin-top:25px;padding-top:24px;border-top:1px solid var(--line);display:grid;gap:12px; }
       .order-form.hidden { display:none; }
-      .order-form h3 { font:400 24px "Fraunces",serif;margin-bottom:5px; }
+      .order-form h3 { font:400 24px "Cormorant Garamond",serif;margin-bottom:5px; }
       .field { border-radius:0; }
       .confirm-order { width:100%; }
       .product-mobile-bar { display:none; }
@@ -326,7 +328,7 @@
         .detail-notes b { font-size:9px; }
         .detail-buy-row { padding-bottom:18px; }
         .product-mobile-bar { position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:rgba(11,10,8,.97);border-top:1px solid var(--line);z-index:3; }
-        .product-mobile-bar span { color:var(--gold);font:400 19px "Fraunces",serif; }
+        .product-mobile-bar span { color:var(--gold);font:400 19px "Cormorant Garamond",serif; }
         .product-mobile-bar button { padding:11px 22px; }
       }
       @media(min-width:761px) and (max-width:1050px) {
@@ -537,7 +539,6 @@
             </button>
             <div class="product-info">
               <div class="product-title-row"><h3>${p.name}</h3><span class="product-price">${egp(p.price50)}</span></div>
-              <p class="product-description" dir="rtl">${p.description}</p>
               <span class="product-size-note">50 ML · 100 ML</span>
             </div>
           </article>`;
