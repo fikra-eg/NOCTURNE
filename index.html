@@ -411,7 +411,7 @@
           <div class="policy-grid">
             <div><span>01</span><h3>Order Confirmation</h3><p>Submit your details from the fragrance page and we’ll confirm your order. Orders are confirmed via WhatsApp.</p></div>
             <div><span>02</span><h3>Select Your Size</h3><p>Choose your preferred size. Price and availability are shown before checkout.</p></div>
-            <div><span>03</span><h3>التوصيل</h3><p>يتم تنسيق تفاصيل التوصيل معك بعد إرسال الطلب.</p></div>
+            <div><span>03</span><h3>Delivery</h3><p>Delivery details will be arranged with you after your order is submitted.</p></div>
           </div>
         </div>
       </section>
@@ -610,7 +610,7 @@
               <div id="formWrap" class="order-form hidden">
                 <h3>Delivery Details</h3>
                 <div><input class="field" id="fName" placeholder="Full Name" /><p class="error-text hidden" id="err-fName">Enter your full name.</p></div>
-                <div><input class="field" id="fPhone" placeholder="Phone Number" inputmode="tel" /><p class="error-text hidden" id="err-fPhone">اكتب رقم هاتف صحيح.</p></div>
+                <div><input class="field" id="fPhone" placeholder="Phone Number" inputmode="tel" /><p class="error-text hidden" id="err-fPhone">Enter a valid phone number.</p></div>
                 <div><select class="field" id="fGov"><option value="" disabled selected>Governorate</option>${GOVERNORATES.map((g) => `<option value="${g}">${g}</option>`).join("")}</select><p class="error-text hidden" id="err-fGov">Select your governorate.</p></div>
                 <div><textarea class="field" id="fAddress" rows="2" placeholder="Detailed Address"></textarea><p class="error-text hidden" id="err-fAddress">Enter your detailed address.</p></div>
                 <button class="btn-gold confirm-order" onclick="confirmOrder()">Confirm Order via WhatsApp</button>
@@ -657,7 +657,7 @@
           `Name: ${encodeURIComponent(name)}%0A` +
           `Phone: ${encodeURIComponent(phone)}%0A` +
           `Governorate: ${encodeURIComponent(gov)}%0A` +
-          `العنوان: ${encodeURIComponent(address)}`;
+          `Address: ${encodeURIComponent(address)}`;
 
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
       }
